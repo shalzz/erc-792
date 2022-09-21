@@ -39,7 +39,7 @@ contract CentralizedArbitratorWithAppeal is IArbitrator {
     }
 
     function appealCost(uint256 _disputeID, bytes memory _extraData) public view override returns (uint256) {
-        return arbitrationFee * (2**(disputes[_disputeID].appealCount));
+        return arbitrationFee * 2; 
     }
 
     function setArbitrationCost(uint256 _newCost) public {
